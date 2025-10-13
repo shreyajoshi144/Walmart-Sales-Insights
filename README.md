@@ -1,22 +1,33 @@
 # Walmart Sales Insights
-Sales trends and insights from Walmart data. 
 
-This project analyzes Walmart’s sales dataset (sourced from Kaggle) to uncover insights into sales trends, profitability, and customer behavior. It combines SQL for querying structured data with Python (Pandas, NumPy) for analysis and visualizes. 
-## Features  
-- Insights on sales performance and profitability
-- Analysis of customer behavior and purchasing trends
-- Data cleaning, analysis, and visualization using Python,its libraries and SQL
+## Overview
+End-to-end **SQL + Python data analysis project** on Walmart sales data.  
+Imports raw CSV into a database, performs preprocessing and visualization in Python,  
+and creates a clean SQL table ready for further analysis.
 
-## Tech Stack  
-- **Python**: Pandas, NumPy, Matplotlib, Seaborn  
-- **SQL**: Queries for sales insights and trend analysis  
+## Workflow
+- **Import CSV into SQL Database**: Load `WalmartCleanData.csv` into a SQLite database as the `SalesRaw` table.  
+  Clean numeric columns, convert dates, and handle missing values to ensure accurate database storage.  
 
-## Project Structure  
-- `data/` → Kaggle Walmart sales dataset  
-- `scripts/` → Python files for cleaning and analysis  
-- `sql/` → SQL queries for sales insights   
+- **Connect SQL to Python**: Use Python’s `sqlite3` library to connect to the database and fetch data.  
+  This allows all preprocessing, analysis, and visualization to be performed programmatically and reproducibly.  
 
-## Results  
-- Identified key **sales trends** and seasonal patterns  
-- Highlighted **profitability drivers**  
-- Analyzed **customer behavior** to support business decisions  
+- **Python Processing & Visualization**: Clean data, calculate `total_sales`, and engineer relevant features for analysis.  
+  Generate professional visualizations such as top products, sales trends over time, and category-wise sales distributions.  
+
+- **Create Clean SQL Table**: Write the processed and enriched data back into the database as the `SalesClean` table.  
+  This creates a ready-to-use clean dataset for further queries or reporting in SQL or Python.  
+
+- **View & Explore Clean Data**: Preview the `SalesClean` table and perform quick analysis using Python.  
+  Visualize top products and key metrics to validate the cleaned data and provide actionable insights.
+
+## Key Features
+- Full **SQL + Python workflow**  
+- Handles missing values and cleans numeric & date columns  
+- Professional visualizations with **Matplotlib** & **Seaborn**  
+- Fully reproducible on any system using SQLite
+
+## How to Run
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
